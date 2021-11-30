@@ -1,0 +1,366 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box ;
+    text-decoration: none;
+    font-family:"Roboto";
+    transition:all .2s linear;
+
+}
+
+h1, h3{
+    font-family: 'Oswald', sans-serif;
+}
+
+*::selection{
+    background-color: black;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #333;
+}
+html::-webkit-scrollbar-thumb{
+    background: red;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width:100%;
+    height:10%;
+    background-color: white;
+    padding: 5%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin:1.5rem;
+    position: relative;
+}
+
+header .navbar ul li::after{
+    position: absolute;
+    content: "";
+    width:0;
+    height:3px;
+    background: #009688;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+header .navbar ul li:hover::after{
+    width: 100%;
+}
+header .navbar ul li a{
+    color:black;
+    font-size: 1.7rem;
+    text-decoration: none;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color:red;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem 10%;
+    padding-top: 17rem;
+	
+}
+.home{
+    background-color:AntiqueWhite ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+}
+.home .content{
+    flex:1 1 39rem;
+}
+
+.home .content h3{
+    color:#333;
+    font-size: 6rem;
+}
+
+.home .content p{
+    color:green;
+    font-size: 3rem;
+    padding:1rem 0;
+}
+
+
+.btn{
+    font-size: 25px;
+    width:150px;
+    padding:15px 0;
+    text-align: center;
+    border-radius: 25px;
+    background: transparent;
+    color: red;
+    border:.5rem solid yellow;
+    position: relative;
+    overflow:hidden;
+}
+
+.btn span{
+    background:blue;
+    height:100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.52s;
+}
+
+.btn:hover span{
+    width:100%;
+}
+
+.about{
+	background-color:HoneyDew ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.about .content{
+    flex:1 1 40rem;
+    padding:2rem;
+}
+.about .content h3{
+    font-size: 4rem;
+    color:#333;
+}
+.about .content p{
+    font-size: 1.6rem;
+    color:#666;
+    padding:1rem 0;
+}
+
+.reviews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.reviews .image{
+    flex:1 1 40rem;
+    height:50rem;
+    background:url(5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+}
+.reviews .content p{
+    flex:1 1 40rem;
+    padding:2rem;
+}
+.reviews .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.reviews .box-container .box{
+    background:LightCyan;
+    width:35rem;
+    padding:2rem;
+    margin:2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.gallery{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.gallery .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .box-container .box{
+    background:#fff;
+    width:35rem;
+    padding:2rem;
+    margin:2rem;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.gallery .box-container .box img{
+
+    width:100%;
+    object-fit: cover;
+}
+
+.gallery .box-container .box h3{
+    color:#FF8474;
+    font-size: 3rem;
+    font-weight: normal;
+    text-shadow: 1px 1px rgba(0, 0, 0,0.7);
+}
+
+.gallery .box-container .box:hover{
+    transform: scale(1.02);
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+.footer{
+    background:#282727;
+    padding:1rem 7%;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 25rem;
+    margin:2rem;
+}
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:#fff;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.footer .box-container .box p{
+    font-size: 1.7rem;
+    color:#eee;
+    padding:1rem 0;
+}
+
+.footer .box-container .box a{
+    font-size: 1.7rem;
+    color:#eee;
+    padding:1rem 0;
+    display: block;
+}
+
+.footer .box-container .box a:hover{
+    color:darkblue;
+    text-decoration: none;
+}
+
+.footer .box-container .box p i{
+    padding-right: .5rem;
+    color:yellow;
+
+}
+
+.footer h1{
+    color:goldenrod;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 3% 0;
+}
+@media (max-width:768px) {
+    html{
+        font-size: 55%;
+    }
+    header .logo img{
+        height:5rem;
+    }
+    header #menu-bar{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top: 8rem;
+        left: 0;
+        width: 100%;
+        background: #333;
+        border-top: .2rem solid rgba(0, 0, 0, 0.1);
+        transform:scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding: 2rem;
+    }
+
+    header .navbar ul li{
+        margin: 1.5rem;
+        width:100%;
+    }
+
+    header .navbar ul li a{
+        display: block;
+        color:#fff;
+        padding-left: 2rem;
+        border-left: .2rem solid #fff;
+        font-size: 2rem;
+    }
+
+    .fa-toggle{
+        transform: rotate(180deg);
+    }
+    header .navbar.nav-toggle{
+        transform:scaleY(1);
+        opacity: 1;
+    }
+
+    .home .content{
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .image{
+        animation: none;
+    }
+
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
